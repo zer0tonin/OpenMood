@@ -3,7 +3,7 @@
   "displayName": "OpenMood",
   "expo": {
     "name": "OpenMood",
-    "slug": "expo-template-bare",
+    "slug": "openmood",
     "privacy": "unlisted",
     "sdkVersion": "34.0.0",
     "version": "1.0.0",
@@ -12,6 +12,11 @@
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "androidStatusBarColor": "#334393",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#334393"
+    }
   }
 }
