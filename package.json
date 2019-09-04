@@ -4,12 +4,15 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier src --write",
+    "style": "prettier src --check"
   },
   "dependencies": {
     "expo": "^34.0.1",
     "expo-font": "~6.0.1",
     "native-base": "2.13.0",
+    "prettier": "^1.18.2",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "0.59.10",

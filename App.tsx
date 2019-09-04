@@ -1,29 +1,28 @@
-import React from 'react';
-import { AppLoading } from 'expo';
-import { Container, Title, Header, Left, Body, Right } from 'native-base';
-import * as Font from 'expo-font';
-import { Ionicons } from '@expo/vector-icons';
+import React from "react";
+import { AppLoading } from "expo";
+import { Container, Title, Header, Left, Body, Right } from "native-base";
+import * as Font from "expo-font";
+import { Ionicons } from "@expo/vector-icons";
 
 interface State {
   isReady: boolean;
 }
 
-interface Props {
-}
+interface Props {}
 
 export default class App extends React.Component<Props, State> {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      isReady: false,
+      isReady: false
     };
   }
 
   async componentDidMount() {
     await Font.loadAsync({
-      Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-      ...Ionicons.font,
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      ...Ionicons.font
     });
     this.setState({ isReady: true });
   }
@@ -36,11 +35,11 @@ export default class App extends React.Component<Props, State> {
     return (
       <Container>
         <Header>
-          <Left/>
+          <Left />
           <Body>
             <Title>OpenMood?</Title>
           </Body>
-          <Right/>
+          <Right />
         </Header>
       </Container>
     );
