@@ -4,6 +4,14 @@ import { Container, Title, Header, Left, Body, Right } from "native-base";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 
+import { Mood, MoodType } from './src/Mood/Mood';
+import MoodView from './src/Mood/MoodView';
+
+const moods = [
+  new Mood(1, new Date(), MoodType.Joy, "I should do it again", "Ate a good meal"),
+  new Mood(2, new Date(), MoodType.Fear, "It scares me", "Saw an insect"),
+]
+
 interface State {
   isReady: boolean;
 }
@@ -37,10 +45,11 @@ export default class App extends React.Component<Props, State> {
         <Header>
           <Left />
           <Body>
-            <Title>OpenMood?</Title>
+            <Title>OpenMood</Title>
           </Body>
           <Right />
         </Header>
+        {moods.map(MoodView)}
       </Container>
     );
   }
